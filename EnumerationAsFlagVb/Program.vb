@@ -1,10 +1,6 @@
-Imports System
-Imports System.IO
-
 Module Program
     Sub Main(args As String())
         Dim fileOne As FileAttributeEnum = FileAttributeEnum.Folder
-        Dim fileTwo As FileAttributeEnum = FileAttributeEnum.Read Or FileAttributeEnum.Executable Or FileAttributeEnum.System
 
         Console.WriteLine(fileOne.ToString)
         Console.Write("Is System? ")
@@ -12,6 +8,7 @@ Module Program
         Console.Write("Is Folder? ")
         Console.WriteLine(fileOne.HasFlag(FileAttributeEnum.Folder))
 
+        Dim fileTwo As FileAttributeEnum = FileAttributeEnum.Read Or FileAttributeEnum.Executable Or FileAttributeEnum.System   '00001011
         Console.WriteLine(fileTwo.ToString)
         Console.Write("Is Folder? ")
         Console.WriteLine(fileTwo.HasFlag(FileAttributeEnum.Folder))
